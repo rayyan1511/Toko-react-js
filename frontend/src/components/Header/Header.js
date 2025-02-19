@@ -1,23 +1,20 @@
 import React from "react";
 import classes from "./header.module.css";
 import { Link } from "react-router-dom";
+import { useCart } from "../../hooks/useCart";
+import { useAuth } from "../../hooks/useAuth";
 
 export default function Header() {
-  const user = {
-    name: "John",
-  };
+  const {user, logout} = useAuth();
 
-  const cart = {
-    totalCount: 10,
-  };
-
-  const logout = () => {};
+  const {cart} = useCart();
+  
 
   return (
     <header className={classes.header}>
       <div className={classes.container}>
         <Link to="/" className={classes.logo}>
-          Food Mine!
+          Ecommerce
         </Link>
         <nav>
           <ul>
@@ -31,12 +28,12 @@ export default function Header() {
                 </div>
               </li>
             ) : (
-              <Link to="/login">login</Link>
+              <Link to="/login">Login</Link>
             )}
 
             <li>
               <Link to="/cart">
-                Cart
+                Keranjang
                 {cart.totalCount > 0 && <span className={classes.cart_count}>{cart.totalCount}</span>}
               </Link>
             </li>
