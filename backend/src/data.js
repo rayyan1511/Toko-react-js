@@ -19,7 +19,7 @@ export const sample_foods = [
     origins: ["persia", "middle east", "china"],
     stars: 4,
     imageUrl: "foto-2.jpg",
-    tags: ["Remaja", "wanita"],
+    tags: ["Remaja", "Wanita"],
   },
   {
     id: "3",
