@@ -1,0 +1,23 @@
+{
+  "name": "toko-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "prebuild":  "npm install --prefix backend && npm install --prefix frontend",
+    "build": "cd frontend && npm run build",
+    "postbuild": "mv -f frontend/build backend/src/public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayyan1511/Toko-react-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rayyan1511/Toko-react-js/issues"
+  },
+  "homepage": "https://github.com/rayyan1511/Toko-react-js#readme"
+}

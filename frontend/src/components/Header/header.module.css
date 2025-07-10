@@ -1,0 +1,78 @@
+.header{
+    background: #D2B68A;
+    padding: 0;
+    position : sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header a{
+    color: #312d09;
+    font-size: 18px;
+    font-weight: bold
+}
+
+.header a:hover{
+    background: #948162;
+    color: white;
+    cursor: pointer;
+}
+
+.container{
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    font-weight: bold;
+    padding: 1rem;
+    
+}
+
+.header ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.header ul a{
+    padding: 1rem;
+    display: inline-block;
+}
+
+.menu_container{
+    position: relative;
+}
+
+.menu{
+    position: absolute;
+    z-index: 1001;
+    background-color: #D2B68A;
+    display: none;
+}
+
+.menu_container:hover .menu{
+    display: block;
+}
+
+.menu a{
+    width: 100%;
+    min-width: 6rem;
+}
+
+.cart_count{
+    background-color: #07043e;
+    color: white;
+    padding: 0.1rem 0.45rem;
+    border-radius: 50rem;
+    font-size:0.8rem;
+}
+
+
+/* Icons */
+.cart_icon{
+    font-size: 20px; /* adjust size */
+    color: black;
+    vertical-align: middle;
+}
