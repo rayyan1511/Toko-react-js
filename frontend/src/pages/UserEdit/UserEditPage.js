@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { getById, register, updateUser } from "../../services/userService";
+import { getById,  updateUser } from "../../services/userService";
 import { useParams } from "react-router-dom";
 import classes from "./userEdit.module.css";
 import Title from "../../components/Title/Title";
