@@ -1,33 +1,196 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 
-.hero_section {
-    height: 18rem;
-    background-size: 100% 100%;
-    background-position: center;
-    display: flex;
+.heroSection {
+  min-height: 75vh;
+  background: #63488f; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.heroContainer {
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+
+.heroTextSection {
+  flex: 1;
+  text-align: left;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.heroTitleAccent {
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.heroDescription {
+  font-size: 1.25rem;
+  color: #c59914;
+  margin-bottom: 2rem;
+  max-width: 28rem;
+  font-weight: 300;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.heroButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  color: #122648;
+  border: 1px solid #060935;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   font-family: 'Georgia', 'Times New Roman', serif;
+}
+.heroButton:hover{
+  background-color: #060935;
+  color: #ffffff
+}
+
+.heroCtaButtonText {
+  display: inline-block;
+}
+
+/* Hero Logo Section */
+.heroLogoSection {
+  flex-shrink: 0;
+}
+
+.heroLogoWrapper {
+  position: relative;
+}
+
+.heroLogoBackground {
+  position: absolute;
+  inset: 0;
+  background: #63488f;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+
+.heroLogo {
+  position: relative;
+  z-index: 10;
+  width: 16rem;
+  height: 12rem;
+  object-fit: contain;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+/* Add responsive breakpoint for tablets */
+@media (max-width: 1023px) {
+  .heroLogoSection {
+    display: none;
+  }
+  
+  .heroContent {
     justify-content: center;
-    align-items: center;
-    color: #fff;
-    background-image: linear-gradient(to bottom, #D2B68A, #ffffff);
-    gap: 18rem;
-    font-family: 'Playfair Display', serif; 
   }
   
-  .hero_heading {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-   
+  .heroTextSection {
+    max-width: 600px;
+    margin: 0 auto;
   }
-  
-  .hero_text {
-    font-size: 18px;
-    margin-bottom: 40px;
-    color: #000000b2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroContent {
+    flex-direction: column;
     text-align: center;
-    font-family: 'Playfair Display', sans-serif; 
+    gap: 2rem;
+    justify-content: center;
   }
   
+  .heroTextSection {
+    text-align: center;
+  }
   
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .heroDescription {
+    font-size: 1.125rem;
+  }
+  
+  /* Hide logo on tablet and mobile */
+  .heroLogoSection {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 0 0.5rem;
+  }
+  
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .heroDescription {
+    font-size: 1rem;
+  }
+  
+  .heroCtaButton {
+    padding: 0.875rem 1.75rem;
+  }
+  
+  /* Logo remains hidden on mobile */
+  .heroLogoSection {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroContent {
+    gap: 4rem;
+  }
+  
+  .heroTitle {
+    font-size: 4rem;
+  }
+  
+  .heroDescription {
+    font-size: 1.5rem;
+  }
+  
+  /* Show logo on desktop with larger size */
+  .heroLogoSection {
+    display: block;
+  }
+  
+  .heroLogo {
+    width: 20rem;
+    height: 13.5rem;
+  }
+}

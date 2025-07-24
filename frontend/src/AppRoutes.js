@@ -16,6 +16,7 @@ import AdminRoute from "./components/AdminRoute/AdminRoute";
 import BarangAdminPage from "./pages/BarangAdmin/BarangAdminPage";
 import BarangEditPage from "./pages/BarangEdit/BarangEditPage";
 import UsersPage from "./pages/UsersPage/UsersPage";
+import UserEditPage from "./pages/UserEdit/UserEditPage";
 
 
 export default function AppRoutes() {
@@ -105,6 +106,14 @@ export default function AppRoutes() {
         element={
           <AdminRoute>
             <UsersPage/>
+          </AdminRoute>
+        }
+      />
+      <Route
+        path="/admin/editUser/:userId"
+        element={
+          <AdminRoute>
+            <UserEditPage/>
           </AdminRoute>
         }
       />

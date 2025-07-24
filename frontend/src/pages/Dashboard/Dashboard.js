@@ -34,14 +34,14 @@ const allItems = [
     title: "Orders",
     imageUrl: "/icons/orders.svg",
     url: "/orders",
-    bgColor: "#9d8765",
+    bgColor: "#63488f",
     color: "white",
   },
   {
     title: "Profile",
     imageUrl: "/icons/profile.svg",
     url: "/profile",
-    bgColor: "#9d8765",
+    bgColor: "#63488f",
     color: "white",
   },
   {
@@ -49,7 +49,7 @@ const allItems = [
     imageUrl: "/icons/users.svg",
     url: "/admin/users",
     forAdmin: true,
-    bgColor: "#9d8765",
+    bgColor: "#63488f",
     color: "white",
   },
   {
@@ -57,7 +57,7 @@ const allItems = [
     imageUrl: "/icons/barang.svg",
     url: "/admin/barang",
     forAdmin: true,
-    bgColor: "#9d8765",
+    bgColor: "#63488f",
     color: "white",
   },
 ];

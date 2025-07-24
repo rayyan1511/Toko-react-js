@@ -4,6 +4,7 @@ import { getAll, toggleBlock } from "../../services/userService";
 import classes from "./usersPage.module.css";
 import Title from "../../components/Title/Title";
 import { useAuth } from "../../hooks/useAuth";
+import Search from "../../components/Search/Search";
 
 export default function UsersPage() {
   const [users, setUsers] = useState();
@@ -33,6 +34,11 @@ export default function UsersPage() {
     <div className={classes.container}>
       <div className={classes.list}>
         <Title title="Kelola User" />
+        <Search
+          searchRoute="/admin/users/"
+          defaultRoute="/admin/users"
+          margin="1rem 0"
+        />
         <div className={classes.list_item}>
           <h3>Nama</h3>
           <h3>Email</h3>
@@ -49,7 +55,7 @@ export default function UsersPage() {
               <span>{user.isAdmin ? "✅" : "❌"}</span>
               <span className={classes.actions}>
                 <Link to={"/admin/editUser/" + user.id}> Edit</Link>
-                {auth.user.id !== user.id && ( 
+                {auth.user.id !== user.id && (
                   <Link onClick={() => handleToggleBlock(user.id)}>
                     {user.isBlocked ? "Unblock" : "Block"}
                   </Link>

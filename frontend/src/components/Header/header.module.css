@@ -1,9 +1,10 @@
 .header{
-    background: #D2B68A;
+    background: #63488f;
     padding: 0;
     position : sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header a{
@@ -13,21 +14,28 @@
 }
 
 .header a:hover{
-    background: #948162;
-    color: white;
+    background: #4e3577;
+    color: rgb(255, 255, 255);
     cursor: pointer;
+    .cart_icon{
+        color: white;
+    }
 }
 
 .container{
     margin:0 auto;
     display: flex;
     justify-content: space-between;
+
 }
 
 .logo{
     font-weight: bold;
     padding: 1rem;
-    
+}
+.logo_header{
+    width: 90px ;
+    height: 50px;
 }
 
 .header ul{
@@ -37,7 +45,7 @@
 }
 
 .header ul a{
-    padding: 1rem;
+    padding: 2rem;
     display: inline-block;
 }
 
@@ -48,7 +56,7 @@
 .menu{
     position: absolute;
     z-index: 1001;
-    background-color: #D2B68A;
+    background-color: #63488f;
     display: none;
 }
 
