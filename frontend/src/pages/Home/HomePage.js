@@ -4,7 +4,7 @@ import {
   getAllByTag,
   getAllTags,
   search,
-} from "../../services/foodService";
+} from "../../services/barangService";
 import Thumbnails from "../../components/Thumbnails/Thumbnails";
 import { useParams } from "react-router-dom";
 import Search from "../../components/Search/Search";

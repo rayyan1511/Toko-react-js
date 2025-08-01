@@ -3,7 +3,7 @@ dotenv.config();
 import { fileURLToPath } from "url";
 import express from "express";
 import cors from "cors";
-import barangRouter from "./routers/food.router.js";
+import barangRouter from "./routers/barang.router.js";
 import userRouter from "./routers/user.router.js";
 import orderRouter from "./routers/order.router.js";
 import uploadRouter from "./routers/upload.router.js";
@@ -30,8 +30,8 @@ app.use("/api/users", userRouter);
 app.use("/api/orders", orderRouter);
 app.use("/api/upload", uploadRouter);
 
-const publicFolder = path.join(__dirname, "public");
-app.use(express.static(publicFolder));
+// const publicFolder = path.join(__dirname, "public");
+// app.use(express.static(publicFolder));
 
 // app.get("*", (req, res) => {
 //   const indexFilePath = path.join(publicFolder, "index.html");

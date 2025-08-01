@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import classes from "./barangEdit.module.css";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
-import { add, getByID, update } from "../../services/foodService";
+import { add, getByID, update } from "../../services/barangService";
 import Title from "../../components/Title/Title";
 import InputContainer from "../../components/InputContainer/InputContainer";
 import Input from "../../components/Input/Input";
