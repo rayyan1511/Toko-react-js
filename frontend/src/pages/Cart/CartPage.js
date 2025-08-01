@@ -66,9 +66,10 @@ export default function CartPage() {
 
           <div className={classes.checkout}>
             <div>
-              <div className={classes.barangs_count}>{cart.totalCount}</div>
+              <div className={classes.barangs_count}>Jumlah Barang : {cart.totalCount}</div>
+              <br />
               <div className={classes.total_price}>
-                <Price price={cart.totalPrice} />
+                Total :  <Price price={cart.totalPrice} />
               </div>
             </div>
 

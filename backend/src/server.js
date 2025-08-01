@@ -3,7 +3,7 @@ dotenv.config();
 import { fileURLToPath } from "url";
 import express from "express";
 import cors from "cors";
-import barangRouter from "./routers/food.router.js";
+import barangRouter from "./routers/barang.router.js";
 import userRouter from "./routers/user.router.js";
 import orderRouter from "./routers/order.router.js";
 import uploadRouter from "./routers/upload.router.js";

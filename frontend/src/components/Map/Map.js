@@ -18,7 +18,7 @@ export default function Map({ readonly, location, onChange }) {
       <MapContainer
         className={classes.map}
         center={[0, 0]}
-        zoom={1}
+        zoom={2}
         dragging={!readonly}
         touchZoom={!readonly}
         doubleClickZoom={!readonly}
