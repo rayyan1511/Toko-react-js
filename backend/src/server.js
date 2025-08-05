@@ -38,6 +38,8 @@ app.listen(PORT, () => {
   console.log("listening on port " + PORT);
 });
 
+
+
 // const publicFolder = path.join(__dirname, "public");
 // app.use(express.static(publicFolder));
 
