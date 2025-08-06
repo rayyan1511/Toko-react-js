@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cd backend && npm start",
+    "prebuild": "cd backend && npm install && cd ../frontend && npm install",
     "build": "cd frontend && npm run build",
     "postbuild": "mv -f frontend/build/ backend/src/public"
   },
@@ -15,6 +16,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node" : ">=19.0.0"
+  },
   "bugs": {
     "url": "https://github.com/rayyan1511/Toko-react-js/issues"
   },
