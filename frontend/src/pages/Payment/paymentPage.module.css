@@ -1,39 +1,93 @@
 .container {
-    display: flex;
-    margin: 0 2rem 6rem 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  margin: 0 2rem 6rem 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Bagian detail pesanan */
+.content {
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bagian ringkasan */
+.summary > div {
+  display: flex;
+  margin-top: 0.7rem;
+}
+
+.summary span {
+  font-size: 1.2rem;
+}
+
+.summary h3 {
+  margin: 0 1rem 0 0;
+  flex-basis: 5rem;
+}
+
+/* Tombol bayar */
+.buttons_container {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  margin: 2rem;
+  width: 35rem;
+}
+
+/* Responsif untuk tablet */
+@media (max-width: 1024px) {
+  .container {
+    margin: 0 1.5rem 4rem 1.5rem;
   }
- 
+
   .content {
-    width: 35rem;
-    margin: 0 3rem 0 0;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    margin: 0;
   }
 
-  .summary > div {
-    display: flex;
-    margin-top: 0.7rem;
-  }
-
-  .summary span {
-    font-size: 1.2rem;
-  }
-
-  .summary h3 {
-    margin: 0 1rem 0 0;
-    flex-basis: 5rem;
-  }
-
-  .buttons_container {
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
   .buttons {
-    margin: 2rem;
-    width: 35rem;
+    width: 100%;
+    max-width: 30rem;
   }
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .container {
+    margin: 0 1rem 3rem 1rem;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .map {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .buttons {
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+}
+
+/* HP sangat kecil  */
+@media (max-width: 480px) {
+  .summary span {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
 

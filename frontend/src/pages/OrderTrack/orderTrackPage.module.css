@@ -1,42 +1,101 @@
 .container {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 35rem;
+  margin-right: 1rem;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.header > div {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.header strong {
+  display: inline-block;
+  width: 20%;
+}
+
+
+.payment {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.payment a {
+  background-color: #040226;
+  color: white;
+  padding: 0.8rem 5rem;
+  border-radius: 1rem;
+  display: inline-block;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.payment a:hover {
+  background-color: #1a1760;
+}
+
+/* Responsive Styles */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .container {
+    margin: 0 1.5rem 4rem 1.5rem;
   }
-  
+
   .content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 35rem;
-    margin-right: 1rem;
+    margin-right: 0;
+    max-width: 100%;
   }
-  
-  .header {
-    margin-bottom: 1rem;
-  }
-  
-  .header > div {
-    margin-top: 1rem;
-    font-size: 1.1rem;
-  }
-  
-  .header strong {
-    display: inline-block;
-    width: 20%;
-  }
-  
-  .payment {
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-  }
-  
+
   .payment a {
-    background-color: #040226;
-    color: white;
-    padding: 0.8rem 5rem;
-    border-radius: 1rem;
+    padding: 0.8rem 4rem;
   }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .container {
+    margin: 0 1rem 3rem 1rem;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .payment a {
+    width: 100%;
+    max-width: 20rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* HP sangat kecil */
+@media (max-width: 480px) {
+  .header strong {
+    width: 40%;
+  }
+
+  .payment a {
+    max-width: 100%;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}

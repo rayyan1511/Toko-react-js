@@ -1,36 +1,90 @@
+/* Layout desktop */
 .container {
-    margin-top: 1rem;
-    display: flex;
-    margin: 0 0 6rem 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.content {
-    width: 35rem;
-    margin: 0 3rem 0 0;
-}
-
-.content,
-.inputs {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.inputs {
-    width: 100%;
+/* Bagian form & order list */
+.content {
+  flex: 1;
+  min-width: 300px;
 }
 
+/* Map section */
+.container > div:nth-child(2) {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Tombol bayar pesanan */
 .buttons_container {
-    flex-basis: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Desktop: tombol di tengah */
+  margin-top: 1rem;
+}
+
+.buttons_container .buttons {
+  display: flex;
+  width: 20rem;
+  justify-content: center; /* Desktop: tombol di tengah */
+}
+
+/* Responsive untuk tablet & HP */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .content,
+  .container > div:nth-child(2),
+  .buttons_container {
+    width: 100% !important;
+  }
+
+  /* Input full width */
+  .inputs input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Map full width */
+  .container .map {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+  }
+
+  /* Order items list bisa scroll */
+  .content table,
+  .content .order_items_list {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Tombol di bawah dan full width */
+  .buttons_container {
+    order: 3;
     justify-content: center;
+  }
 
+  .buttons_container .buttons {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
-.buttons {
-    margin: 2rem;
-    width: 25rem;
-    
-}
+/* HP sangat kecil */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
 
+  .inputs input {
+    font-size: 14px;
+  }
+}

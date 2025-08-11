@@ -66,9 +66,8 @@ export default function CheckoutPage() {
               }}
             />
         </div>
-
         <div className={classes.buttons_container}>
-         <div className={classes.buttons}>
+         <div className={classes.buttons} >
          <Button
               type="submit"
               text="Bayar Pesanan"
@@ -78,7 +77,9 @@ export default function CheckoutPage() {
             />
          </div>
         </div>
+
       </form>
+      
     </>
   );
 }

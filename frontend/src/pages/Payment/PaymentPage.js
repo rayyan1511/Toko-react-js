@@ -13,12 +13,12 @@ export default function PaymentPage() {
   useEffect(() => {
     getNewOrderForCurrentUser().then((data) => setOrder(data));
   }, []);
+  console.log(order);
 
   if (!order) return;
 
   return (
     <>
-      
       <div className={classes.container}>
         <div className={classes.content}>
         <Title title="Detail Pesanan" fontSize="1.6 rem" />
@@ -39,14 +39,15 @@ export default function PaymentPage() {
           <Map readonly={true} location={order.addressLatLng} />
         </div>
 
+
         <div className={classes.buttons_container}>
         <div className={classes.buttons}>
             
             <PaypalButtons order={order}/>
         </div>
         </div>
-        
       </div>
+      
       
     </>
   );
