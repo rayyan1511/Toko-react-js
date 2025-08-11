@@ -1,33 +1,86 @@
 .container {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-  }
-  
-  .list {
-    width: 100%;
-    max-width: 50rem;
-  }
-  
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.list {
+  width: 100%;
+  max-width: 50rem;
+}
+
+.list_item {
+  display: grid;
+  grid-template-columns: 20% 35% 20% 10% 15%;
+  gap: 1%;
+  align-items: center;
+  border-bottom: 3px solid whitesmoke;
+  min-height: 3rem;
+}
+
+.list_item > * {
+  word-wrap: break-word;
+}
+
+h3 {
+  margin-left: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 0.7rem;
+}
+
+/* ========== Responsif Tablet ========== */
+@media (max-width: 768px) {
   .list_item {
-    display: grid;
-    grid-template-columns: 20% 35% 20% 10% 15%;
-    gap: 1%;
-    align-items: center;
-    border-bottom: 3px solid whitesmoke;
-    min-height: 3rem;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto auto auto auto auto;
+    font-size: 1rem;
+    padding: 0.5rem 0;
   }
-  
+
   .list_item > * {
-    word-wrap: break-word;
+    grid-column: span 1;
   }
-  
-  h3 {
-    margin-left: 0;
+
+  .list_item span:nth-child(1) { grid-row: 1; }
+  .list_item span:nth-child(2) { grid-row: 2; }
+  .list_item span:nth-child(3) { grid-row: 3; }
+  .list_item span:nth-child(4) { grid-row: 4; }
+  .list_item span:nth-child(5) { grid-row: 5; }
+
+  /* Hilangkan header h3 di tablet */
+  .list_item h3 {
+    display: none;
   }
-  
+}
+
+/* ========== Responsif HP ========== */
+@media (max-width: 480px) {
+  .list {
+    max-width: 100%;
+  }
+
+  .list_item {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+
+  .list_item > * {
+    grid-column: 1;
+  }
+
+  /* Header di HP juga disembunyikan */
+  .list_item h3 {
+    display: none;
+  }
+
   .actions {
-    display: flex;
-    gap: 0.7rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
+}

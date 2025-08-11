@@ -1,50 +1,100 @@
 .container {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    margin-bottom: 10rem;
-  }
-  
-  .list {
-    margin: 1rem;
-    max-width: 70rem;
-  }
-  
-  a.add_barang {
-    display: inline-block;
-    background: #3dbe2e;
-    color: white;
-    padding: 0.7rem;
-    margin: 0.8rem 0;
-    border-radius: 1.5rem;
-  }
-  
-  a.add_barang:hover {
-    opacity: 0.9;
-  }
-  
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 10rem;
+}
+
+.list {
+  margin: 1rem;
+  max-width: 70rem;
+}
+
+a.add_barang {
+  display: inline-block;
+  background: #3dbe2e;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  margin: 0.8rem 0;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+}
+
+a.add_barang:hover {
+  opacity: 0.9;
+}
+
+.list_item {
+  display: grid;
+  grid-template-columns:
+    minmax(5rem, 7rem)
+    minmax(10rem, 20rem)
+    minmax(5rem, 10rem)
+    minmax(5rem, 10rem);
+  font-size: 1.2rem;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}
+
+.list_item img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100rem;
+  object-fit: cover;
+}
+
+.actions > a {
+  margin-right: 1rem;
+  color: darkblue;
+  cursor: pointer;
+}
+
+/* ======== Responsif ======== */
+@media (max-width: 768px) {
   .list_item {
-    display: grid;
-    grid-template-columns:
-      minmax(5rem, 7rem)
-      minmax(10rem, 20rem)
-      minmax(5rem, 10rem)
-      minmax(5rem, 10rem);
-    font-size: 1.2rem;
-    height: 5rem;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: 5rem 1fr;
+    grid-template-rows: auto auto auto;
+    font-size: 1rem;
+    height: auto;
+    text-align: left;
   }
-  
+
   .list_item img {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 100rem;
-    object-fit: cover;
+    grid-row: span 3;
   }
-  
-  .actions > a {
-    margin-right: 1rem;
-    color: darkblue;
-    cursor: pointer;
+
+  .list_item a {
+    word-break: break-word;
   }
+
+  .list_item .actions {
+    grid-column: 2;
+  }
+
+  a.add_barang {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .list_item {
+    grid-template-columns: 4rem 1fr;
+    font-size: 0.95rem;
+  }
+
+  .list_item img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  a.add_barang {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+}
