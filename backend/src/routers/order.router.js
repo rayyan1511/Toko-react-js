@@ -119,7 +119,7 @@ router.post(
 
     let parameter = {
       transaction_details: {
-        order_id: "ORDER-" + order._id,
+         order_id: "ORDER-" + order._id + '-' + Date.now(),
         gross_amount: order.totalPrice,
       },
       customer_details: {
