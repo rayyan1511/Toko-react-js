@@ -5,6 +5,7 @@ import { BAD_REQUEST, UNAUTHORIZED } from "../constants/httpStatus.js";
 import { OrderModel } from "../models/order.models.js";
 import { OrderStatus } from "../constants/orderStatus.js";
 import { UserModel } from "../models/user.model.js";
+import midtransClient from "midtrans-client";
 
 const router = Router();
 router.use(auth);
@@ -96,6 +97,50 @@ router.get(
     res.send (orders);
   })
 );
+
+
+
+router.post(
+  "/midtrans/create-snap-token",
+  handler(async (req, res) => {
+    const order = await getNewOrderForCurrentUser(req);
+    if (!order) {
+      return res.status(BAD_REQUEST).send("Pesanan tidak ditemukan");
+    }
+
+    // Konfigurasi Midtrans
+    let snap = new midtransClient.Snap({
+      isProduction: false, // true kalau sudah live
+      serverKey: process.env.MIDTRANS_SERVER_KEY,
+    });
+
+    // Ambil data user dari DB
+    const user = await UserModel.findById(req.user.id);
+
+    let parameter = {
+      transaction_details: {
+        order_id: "ORDER-" + order._id,
+        gross_amount: order.totalPrice,
+      },
+      customer_details: {
+        first_name: order.name || "Pelanggan",
+        email: user?.email || "noemail@example.com",
+        phone: order.phone || "08123456789",
+      },
+    };
+
+    try {
+      const snapToken = await snap.createTransaction(parameter);
+      res.json({ token: snapToken.token });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Gagal membuat token Midtrans");
+    }
+  })
+);
+
+
+
 
 const getNewOrderForCurrentUser = async (req) =>
   await OrderModel.findOne({ user: req.user.id, status: OrderStatus.NEW });

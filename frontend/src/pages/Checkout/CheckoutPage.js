@@ -70,8 +70,8 @@ export default function CheckoutPage() {
          <div className={classes.buttons} >
          <Button
               type="submit"
-              text="Bayar Pesanan"
-              width="100%"
+              text="Ke Pembayaran"
+              width="20rem"
               height="3rem"
               backgroundColor = '#040226'
             />

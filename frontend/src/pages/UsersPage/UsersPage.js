@@ -3,13 +3,12 @@ import { Link, useParams } from "react-router-dom";
 import { getAll, toggleBlock } from "../../services/userService";
 import classes from "./usersPage.module.css";
 import Title from "../../components/Title/Title";
-import { useAuth } from "../../hooks/useAuth";
 import Search from "../../components/Search/Search";
 
 export default function UsersPage() {
   const [users, setUsers] = useState();
   const { searchTerm } = useParams();
-  const auth = useAuth();
+  // const auth = useAuth();
 
   useEffect(() => {
     loadUsers();
@@ -55,11 +54,11 @@ export default function UsersPage() {
               <span>{user.isAdmin ? "✅" : "❌"}</span>
               <span className={classes.actions}>
                 <Link to={"/admin/editUser/" + user.id}> Edit</Link>
-                {auth.user.id !== user.id && (
+                {/* {auth.user.id !== user.id && (
                   <Link onClick={() => handleToggleBlock(user.id)}>
                     {user.isBlocked ? "Unblock" : "Block"}
                   </Link>
-                )}
+                )} */}
               </span>
             </div>
           ))}
