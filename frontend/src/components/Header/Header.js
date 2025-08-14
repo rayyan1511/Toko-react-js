@@ -16,7 +16,7 @@ export default function Header() {
     <header className={classes.header}>
       <div className={classes.container}>
         <Link to="/" className={classes.logo}>
-          <img src="./Gambar/Logo_header.png" alt="logo" className={classes.logo_header} />
+          <img src="/Gambar/Logo_header.png" alt="logo" className={classes.logo_header} />
         </Link>
         <nav>
           <ul>

@@ -38,7 +38,7 @@ const HeroSection = () => {
             <div className={styles.heroLogoWrapper}>
               <div className={styles.heroLogoBackground}></div>
               <img 
-                src="./Gambar/gambarSection.png"
+                src="/Gambar/gambarSection.png"
                 alt="Butik FYV Logo"
                 className={styles.heroLogo}
               />
