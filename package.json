@@ -17,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node" : "<=25.0.0"
+    "node" : "<25.0.0"
   },
   "bugs": {
     "url": "https://github.com/rayyan1511/Toko-react-js/issues"
