@@ -9,7 +9,7 @@
   }
   
   .list li a {
-    height: 15rem;
+    height: 20rem;
     width: 100%;
     border: 1px solid #07043e2e;
     border-radius: 0.8rem;
@@ -29,16 +29,16 @@
   
   .image {
     object-fit: cover;
-    height: 9rem;
+    height: 12rem;
   }
 
   
   
   .content {
-    margin-top: 0.2rem;
-    padding: 0.4rem 0.6rem;
+    margin-top: 0.5rem;
+    padding: 0.8rem 1rem;
     position: relative;
-    height: 5rem;
+    height: 7rem;
   }
   
   .favorite {
