@@ -30,7 +30,7 @@ const HeroSection = () => {
               className={styles.heroButton}
               onClick={scrollToContent}
             >
-              Lihat Produk
+              Belanja Sekarang
             </button>
           </div>
           

@@ -5,12 +5,14 @@ import {
   getAllTags,
   search,
 } from "../../services/barangService";
-import Thumbnails from "../../components/Thumbnails/Thumbnails";
+// import Thumbnails from "../../components/Thumbnails/Thumbnails";
 import { useParams } from "react-router-dom";
-import Search from "../../components/Search/Search";
-import Tags from "../../components/Tags/Tags";
-import NotFound from "../../components/NotFound/NotFound";
+// import Search from "../../components/Search/Search";
+// import Tags from "../../components/Tags/Tags";
+// import NotFound from "../../components/NotFound/NotFound";
 import Section from "../../components/Section/Section";
+import CategorySection from "../../components/CategorySection/CategorySection";
+
 
 const initialState = { barangg: [], tags: [] };
 
@@ -49,10 +51,7 @@ export default function HomePage() {
   return (
     <>
       <Section/>
-      <Search />
-      <Tags tags={tags} />
-      {barangg.length === 0 && <NotFound linkText="Reset"/>}
-      <Thumbnails barangg={barangg} />
+      <CategorySection/>
     </>
   );
 }

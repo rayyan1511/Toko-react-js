@@ -17,6 +17,8 @@ import BarangAdminPage from "./pages/BarangAdmin/BarangAdminPage";
 import BarangEditPage from "./pages/BarangEdit/BarangEditPage";
 import UsersPage from "./pages/UsersPage/UsersPage";
 import UserEditPage from "./pages/UserEdit/UserEditPage";
+import TasPage from "./pages/Tas/TasPage";
+import BajuPage from "./pages/Baju/BajuPage";
 
 
 export default function AppRoutes() {
@@ -29,6 +31,10 @@ export default function AppRoutes() {
       <Route path="/cart" element={<CartPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
+      <Route path="/tas" element={<TasPage/>}/>
+      <Route path="/tas/search/:searchTerm" element={<TasPage/>}/>
+      <Route path="/baju" element={<BajuPage/>}/>
+      <Route path="/baju/search/:searchTerm" element={<BajuPage/>}/>
       <Route
         path="/checkout"
         element={

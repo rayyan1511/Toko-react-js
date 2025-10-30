@@ -15,11 +15,20 @@ export default function Header() {
   return (
     <header className={classes.header}>
       <div className={classes.container}>
-        <Link to="/" className={classes.logo}>
+        <li className={classes.logo}>
           <img src="/Gambar/Logo_header.png" alt="logo" className={classes.logo_header} />
-        </Link>
+        </li>
         <nav>
           <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/baju">Baju</Link>
+            </li>
+            <li>
+              <Link to="/tas">Tas</Link>
+            </li>
             {user ? (
               <li className={classes.menu_container}>
                 <Link to="/dashboard"><FiUser />{user.name}</Link>

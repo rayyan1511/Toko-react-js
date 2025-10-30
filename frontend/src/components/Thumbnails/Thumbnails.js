@@ -26,17 +26,17 @@ export default function Thumbnails({ barangg }) {
               <div className={classes.stars}>
                 <StarRating stars={barang.stars} />
               </div>
-              <div className={classes.product_item_footer}>
-                {/* <div className={classes.origins}>
+              {/* <div className={classes.product_item_footer}>
+                <div className={classes.origins}>
                   {barang.origins.map(origin => (
                     <span key={origin}>{origin}</span>
                   ))}
-                </div> */}
-                {/* <div className={classes.cook_time}>
+                </div>
+                <div className={classes.cook_time}>
                   <span>🕒</span>
-                  {barang.cookTime}
-                </div> */}
-              </div>
+                  {barang.descriptions}
+                </div>
+              </div> */}
               <div className={classes.price}>
                 <Price price={barang.price} />
               </div>

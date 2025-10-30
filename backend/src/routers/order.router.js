@@ -110,7 +110,7 @@ router.post(
 
     // Konfigurasi Midtrans
     let snap = new midtransClient.Snap({
-      isProduction: false, // true kalau sudah live
+      isProduction: false, 
       serverKey: process.env.MIDTRANS_SERVER_KEY,
     });
 

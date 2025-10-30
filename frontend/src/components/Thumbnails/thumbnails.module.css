@@ -1,41 +1,44 @@
 .list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     list-style-type: none;
-    padding: 0;
+    padding: 1rem;
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
   }
   
   .list li a {
-    height: 22.5rem;
-    width: 20rem;
+    height: 15rem;
+    width: 100%;
     border: 1px solid #07043e2e;
-    border-radius: 1rem;
-    margin: 0.5rem;
+    border-radius: 0.8rem;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     color: #393e04;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   }
 
   .list li a:hover {
     opacity: 0.9;
+    transform: scale(1.02);
   }
 
   
   .image {
     object-fit: cover;
-    height: 14.5rem;
+    height: 9rem;
   }
 
   
   
   .content {
-    margin-top: 0.3rem;
-    padding: 0.5rem 1rem;
+    margin-top: 0.2rem;
+    padding: 0.4rem 0.6rem;
     position: relative;
-    height: 7rem;
+    height: 5rem;
   }
   
   .favorite {
