@@ -1,15 +1,15 @@
 .list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     list-style-type: none;
     padding: 1rem;
-    gap: 1rem;
-    max-width: 1400px;
+    gap: 1.2rem;
+    max-width: 1200px;
     margin: 0 auto;
   }
   
   .list li a {
-    height: 20rem;
+    height: 300px;
     width: 100%;
     border: 1px solid #07043e2e;
     border-radius: 0.8rem;
@@ -29,16 +29,19 @@
   
   .image {
     object-fit: cover;
-    height: 12rem;
+    height: 160px;
+    width: 100%;
   }
 
   
   
   .content {
     margin-top: 0.5rem;
-    padding: 0.8rem 1rem;
+    padding: 0.8rem;
     position: relative;
-    height: 7rem;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
   }
   
   .favorite {
